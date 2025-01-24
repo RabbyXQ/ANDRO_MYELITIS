@@ -3,7 +3,6 @@ package com.rabbyx.andro_myelitis
 import android.os.Bundle
 import android.webkit.JavascriptInterface
 import android.webkit.WebView
-import android.widget.WebView
 import com.rabbyx.andro_myelitis.databinding.ActivityMainBinding
 import androidx.appcompat.app.AppCompatActivity
 
