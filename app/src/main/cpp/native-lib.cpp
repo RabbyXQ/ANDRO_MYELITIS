@@ -1,6 +1,7 @@
 #include <jni.h>
 #include <string>
 #include <iostream>
+
 extern "C" JNIEXPORT jstring JNICALL
 Java_com_rabbyx_andro_1myelitis_MainActivity_stringFromJNI(
         JNIEnv* env,
@@ -8,9 +9,9 @@ Java_com_rabbyx_andro_1myelitis_MainActivity_stringFromJNI(
     std::string hello = "Hello from C++";
     return env->NewStringUTF(hello.c_str());
 }
-extern "C"
-JNIEXPORT jstring JNICALL
-Java_com_rabbyx_andro_1myelitis_MainActivity_receiveDataFromJS(
+
+extern "C" JNIEXPORT jstring JNICALL
+Java_com_rabbyx_andro_1myelitis_MainActivity_00024JSInterface_receiveDataFromJNI(
         JNIEnv* env,
         jobject /* this */,
         jstring message) {

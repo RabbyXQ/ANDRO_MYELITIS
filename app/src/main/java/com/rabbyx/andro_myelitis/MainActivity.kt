@@ -2,11 +2,8 @@ package com.rabbyx.andro_myelitis
 
 import android.os.Bundle
 import android.webkit.JavascriptInterface
-import android.webkit.WebChromeClient
-import android.webkit.WebResourceRequest
 import android.webkit.WebView
-import android.webkit.WebViewClient
-import android.widget.TextView
+import android.widget.WebView
 import com.rabbyx.andro_myelitis.databinding.ActivityMainBinding
 import androidx.appcompat.app.AppCompatActivity
 
@@ -35,11 +32,12 @@ class MainActivity : AppCompatActivity() {
         fun sendDataToNative(message: String) {
             // Call the C++ function or handle the message
             val response = receiveDataFromJNI(message)
-            println("Received from JavaScript: $message")
+            println("Response from C++: $response")
         }
+        external fun receiveDataFromJNI(message: String): String
 
     }
-    external fun receiveDataFromJNI(message: String): String
+
     external fun stringFromJNI(): String
 
     companion object {
