@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript to Native</title>
+    <script type="text/javascript">
+        function sendMessageToNative() {
+            // Call the Android method
+            Android.sendDataToNative("Hello from JavaScript!");
+        }
+    </script>
+</head>
+<body>
+<button onclick="sendMessageToNative()">Send Message to Native</button>
+</body>
+</html>
